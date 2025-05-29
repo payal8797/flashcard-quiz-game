@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+# 🎓 Flashcard Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful and responsive quiz application built with **React**, **TypeScript**, **Ant Design**, and the [Open Trivia API](https://opentdb.com/). Users can select a quiz category, choose difficulty and number of questions, and answer multiple-choice questions one by one — with real-time feedback and a final score summary.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🧠 **Category-based quizzes** via Open Trivia DB
+- 🎯 **Multiple choice questions** with correct/incorrect feedback
+- 📊 **Score tracking** with results screen
+- 💡 **Shuffled options** without re-randomizing on re-render
+- 📱 **Responsive UI** built with Ant Design
+- 🧭 **React Router navigation** with category URLs
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Tech Stack
+
+- **Frontend**: React + TypeScript
+- **UI**: Ant Design (antd)
+- **Routing**: React Router DOM
+- **Data**: Open Trivia API (`https://opentdb.com/api.php`)
+- **Utilities**: Lodash (for `shuffle()`), Axios
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/flashcard-quiz-app.git
+cd flashcard-quiz-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📚 API Used
+
+### Open Trivia DB API:
+
+- Categories: `https://opentdb.com/api_category.php`
+- Questions:
+  ```
+  https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple
+  ```
+
+---
+
+## 📈 To Do / Future Features
+
+- ✅ Review mode after quiz
+- ✅ Retry same quiz
+- 🔄 Save history or streaks (localStorage)
+- 🎉 Confetti on high scores
+- 🌙 Dark mode toggle
+
+---
+
+## Checkout here: https://flashcard-quiz-game.netlify.app/
